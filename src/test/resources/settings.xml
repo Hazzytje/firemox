@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configuration>
+	<preferred>javax.swing.plaf.metal.MetalLookAndFeel</preferred>
+	<zones>
+		<play>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+			<up>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</up>
+		</play>
+		<graveyard>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+			<up>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</up>
+		</graveyard>
+		<hand>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+			<up>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</up>
+		</hand>
+		<library>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+			<up>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</up>
+		</library>
+		<tbz>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+		<up>
+<wallpaper/>
+</up>
+</tbz>
+		<dbz>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+		<up>
+<wallpaper/>
+</up>
+</dbz>
+		<side>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+		</side>
+		<stack>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+		</stack>
+		<phased-out>
+			<down>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</down>
+			<up>
+				<wallpaper>images/play/hardwoodfloor.png</wallpaper>
+				<mosaic>true</mosaic>
+				<background>-16777216</background>
+			</up>
+		</phased-out>
+	</zones>
+	<language>auto</language>
+	<automana>true</automana>
+	<autostack>false</autostack>
+	<lastTBS>mtg</lastTBS>
+	<logdisptime>false</logdisptime>
+	<loglocked>false</loglocked>
+	<chatdisptime>false</chatdisptime>
+	<chatlocked>false</chatlocked>
+	<threshold-colored>6</threshold-colored>
+	<border-color>auto</border-color>
+	<timer>
+		<hourglass-delay>0</hourglass-delay>
+		<deadlock-delay>0</deadlock-delay>
+		<waiting-delay>0</waiting-delay>
+	</timer>
+	<themes>
+		<skinlf>
+			<caches/>
+		</skinlf>
+	</themes>
+	<port>1299</port>
+	<clientPassword>OBF|</clientPassword>
+	<ip>127.0.0.1</ip>
+	<gameName>My Game</gameName>
+	<serverPassword>OBF|</serverPassword>
+	<useMana>true</useMana>
+	<opponentResponse>true</opponentResponse>
+	<database>
+		<dataOrder>ww2.wizards.com</dataOrder>
+		<pictureOrder>ww2.wizards.com</pictureOrder>
+	</database>
+	<decks>
+		<constraint>none</constraint>
+<deck>tbs/mtg/decks/test/test_vesuvan_shapeshifter.txt</deck>
+</decks>
+	<reverseArt>true</reverseArt>
+	<reverseSide>false</reverseSide>
+	<whoStarts>0</whoStarts>
+<proxyObfuscatedLoginPwd>OBF|1sov1kfd1kd11sov</proxyObfuscatedLoginPwd>
+<proxyHost>192.168.0.252</proxyHost>
+<proxyPort>12990</proxyPort>
+<useProxy>false</useProxy>
+</Configuration>

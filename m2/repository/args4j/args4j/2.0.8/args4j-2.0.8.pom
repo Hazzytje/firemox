@@ -1,0 +1,13 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>args4j</groupId>
+  <artifactId>args4j</artifactId>
+  <name>args4j</name>
+  <version>2.0.8</version>
+  <description>args4j is a small Java class library that makes it easy to parse command line options/arguments in your CUI application.</description>
+  <url>https://args4j.dev.java.net</url>
+  <issueManagement>
+    <url>https://args4j.dev.java.net/servlets/ProjectIssues</url>
+  </issueManagement>
+  <inceptionYear>2005</inceptionYear>
+</project>
