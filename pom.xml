@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/maven-v4_0_0.xsd">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>firemox</groupId>
 	<artifactId>firemox</artifactId>
@@ -40,7 +40,7 @@
 	<mailingLists>
 		<mailingList>
 			<name>Firemox User List</name>
-			<!-- Commented because of French site bug 
+			<!-- Commented because of French site bug
 				<subscribe>http://lists.sourceforge.net/lists/listinfo/firemox-user</subscribe>
 				<unsubscribe>http://lists.sourceforge.net/lists/listinfo/firemox-user</unsubscribe>
 			-->
@@ -49,7 +49,7 @@
 		</mailingList>
 		<mailingList>
 			<name>Firemox Developer List</name>
-			<!-- Commented because of French site bug 
+			<!-- Commented because of French site bug
 				<subscribe>http://lists.sourceforge.net/lists/listinfo/firemox-team</subscribe>
 				<unsubscribe>http://lists.sourceforge.net/lists/listinfo/firemox-team</unsubscribe>
 			-->
@@ -290,51 +290,38 @@
 			</resource>
 		</resources>
 		<plugins>
-			<plugin>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.0-alpha-3</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>firemox</groupId>
-				<artifactId>maven-docgen-plugin</artifactId>
-				<version>1.0-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<phase>site</phase>
-						<goals>
-							<goal>docgen</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <configuration>
-          <instrumentation>
-            <excludes>
-              <exclude>fabdouglas/*.class</exclude>
-              <exclude>net/sf/firemox/ui/**/*Test.class</exclude>
-            </excludes>
-          </instrumentation>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>clean</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+			<!--<plugin>-->
+			<!--<groupId>firemox</groupId>-->
+			<!--<artifactId>maven-docgen-plugin</artifactId>-->
+			<!--<version>1.0-SNAPSHOT</version>-->
+			<!--<executions>-->
+			<!--<execution>-->
+			<!--<phase>site</phase>-->
+			<!--<goals>-->
+			<!--<goal>docgen</goal>-->
+			<!--</goals>-->
+			<!--</execution>-->
+			<!--</executions>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+			<!--<groupId>org.codehaus.mojo</groupId>-->
+			<!--<artifactId>cobertura-maven-plugin</artifactId>-->
+			<!--<configuration>-->
+			<!--<instrumentation>-->
+			<!--<excludes>-->
+			<!--<exclude>fabdouglas/*.class</exclude>-->
+			<!--<exclude>net/sf/firemox/ui/**/*Test.class</exclude>-->
+			<!--</excludes>-->
+			<!--</instrumentation>-->
+			<!--</configuration>-->
+			<!--<executions>-->
+			<!--<execution>-->
+			<!--<goals>-->
+			<!--<goal>clean</goal>-->
+			<!--</goals>-->
+			<!--</execution>-->
+			<!--</executions>-->
+			<!--</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -358,47 +345,47 @@
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
-				<!-- 
-					<execution>
-						<id>launch4j</id>
-						<phase>install</phase>
-						<configuration>
-							<tasks>
-								<taskdef name="launch4j"
-									classname="net.sf.launch4j.ant.Launch4jTask"
-									classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
-								<launch4j>
-									<config jar="target/${artifactId}-${version}-/starter.jar"
-										outfile="target/${name}.exe" errTitle="${name}" chdir="." customProcName="true"
-										icon="src/main/resources/images/mp.ico">
-										<jre minVersion="1.5.0" />
-									</config>
-								</launch4j>
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					-->
+					<!--
+						<execution>
+							<id>launch4j</id>
+							<phase>install</phase>
+							<configuration>
+								<tasks>
+									<taskdef name="launch4j"
+										classname="net.sf.launch4j.ant.Launch4jTask"
+										classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
+									<launch4j>
+										<config jar="target/${artifactId}-${project.version}-/starter.jar"
+											outfile="target/${name}.exe" errTitle="${name}" chdir="." customProcName="true"
+											icon="src/main/resources/images/mp.ico">
+											<jre minVersion="1.5.0" />
+										</config>
+									</launch4j>
+								</tasks>
+							</configuration>
+							<goals>
+								<goal>run</goal>
+							</goals>
+						</execution>
+						-->
 					<execution>
 						<id>izpack</id>
 						<phase>install</phase>
 						<configuration>
 							<tasks>
 								<taskdef name="izpack" classpath="${izpack.dir}/lib/compiler.jar"
-									classname="com.izforge.izpack.ant.IzPackTask" />
-								<mkdir dir="target/installer" />
-								<unzip src="target/${artifactId}-${version}-bin.zip"
-									dest="target/installer" overwrite="true" />
+										 classname="com.izforge.izpack.ant.IzPackTask"/>
+								<mkdir dir="target/installer"/>
+								<unzip src="target/${project.artifactId}-${project.version}-bin.zip"
+									   dest="target/installer" overwrite="true"/>
 								<copy todir="target/installer">
-									<fileset dir="src/main/installer" />
+									<fileset dir="src/main/installer"/>
 								</copy>
 								<copy file="target/installer/starter.jar"
-									tofile="src/main/resources/starter.jar" />
+									  tofile="src/main/resources/starter.jar"/>
 								<izpack input="src/main/installer/install.xml"
-									output="target/${artifactId}-${version}-install.jar" installerType="standard"
-									basedir="target/installer" izPackDir="${izpack.dir}" />
+										output="target/${project.artifactId}-${project.version}-install.jar" installerType="standard"
+										basedir="target/installer" izPackDir="${izpack.dir}"/>
 							</tasks>
 						</configuration>
 						<goals>
@@ -411,12 +398,12 @@
 						<configuration>
 							<tasks>
 								<checksum algorithm="MD5" forceOverwrite="yes" fileext=".md5">
-									<fileset dir="target" includes="${artifactId}-${version}-*.*"
-										excludes="*.md5" />
+									<fileset dir="target" includes="${project.artifactId}-${project.version}-."
+											 excludes="*.md5"/>
 								</checksum>
 								<checksum algorithm="MD5" verifyProperty="isSHAok">
-									<fileset dir="target" includes="${artifactId}-${version}-*.*"
-										excludes="*.md5" />
+									<fileset dir="target" includes="${project.artifactId}-${project.version}-."
+											 excludes="*.md5"/>
 								</checksum>
 							</tasks>
 						</configuration>
@@ -478,14 +465,6 @@
 			<url>http://maven.geotools.fr/repository</url>
 		</repository>
 		<repository>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots />
-			<id>Maven Snapshots</id>
-			<url>http://snapshots.maven.codehaus.org/maven2/</url>
-		</repository>
-		<repository>
 			<id>Maven Mirror</id>
 			<url>http://mirrors.dotsrc.org/maven2/</url>
 		</repository>
@@ -504,37 +483,15 @@
 			<url>http://www.mavenregistry.com/maven2/</url>
 		</pluginRepository>
 		<pluginRepository>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots />
-			<id>Maven Snapshots</id>
-			<url>http://snapshots.maven.codehaus.org/maven2/</url>
-		</pluginRepository>
-		<pluginRepository>
 			<id>mp-plugins</id>
 			<url>file://${basedir}/m2/pluginRepository/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>Codehaus Snapshots</id>
-			<url>http://snapshots.repository.codehaus.org/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>Maven Snapshots</id>
-			<url>http://snapshots.maven.codehaus.org/maven2/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
-			<version>1.0.2</version>
+			<version>1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -580,7 +537,7 @@
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<version>1.3.2</version>
+			<version>1.5.0-b01</version>
 		</dependency>
 		<dependency>
 			<groupId>l2fprod</groupId>
@@ -613,93 +570,93 @@
 			<version>2.0.8</version>
 		</dependency>
 	</dependencies>
-	<reporting>
-		<plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-      </plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>dashboard-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jxr-maven-plugin</artifactId>
-				<configuration></configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<configuration>
-					<configLocation>src/plugin-config/permissive_checks.xml</configLocation>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<configuration>
-					<targetJdk>1.5</targetJdk>
-					<rulesets>
-						<ruleset>/rulesets/basic.xml</ruleset>
-					</rulesets>
-					<linkXref>true</linkXref>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<quiet>true</quiet>
-					<stylesheetfile>${basedir}/src/site/resources/css/javadoc.css</stylesheetfile>
-					<show>public</show>
-					<reportSets>
-						<reportSet>
-							<id>html</id>
-							<configuration>
-								<show>public</show>
-							</configuration>
-							<reports>
-								<report>javadoc</report>
-							</reports>
-						</reportSet>
-					</reportSets>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jdepend-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>changes-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>surefire-report-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.0-beta-2</version>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>taglist-maven-plugin</artifactId>
-				<version>2.0-beta-1</version>
-				<configuration>
-					<multipleLineComments>true</multipleLineComments>
-					<tags>TODO, FIXME, @deprecated</tags>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</reporting>
+	<!--<reporting>-->
+	<!--<plugins>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>cobertura-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>findbugs-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>dashboard-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>jxr-maven-plugin</artifactId>-->
+	<!--<configuration></configuration>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+	<!--<configuration>-->
+	<!--<configLocation>src/plugin-config/permissive_checks.xml</configLocation>-->
+	<!--</configuration>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<artifactId>maven-pmd-plugin</artifactId>-->
+	<!--<configuration>-->
+	<!--<targetJdk>1.5</targetJdk>-->
+	<!--<rulesets>-->
+	<!--<ruleset>/rulesets/basic.xml</ruleset>-->
+	<!--</rulesets>-->
+	<!--<linkXref>true</linkXref>-->
+	<!--</configuration>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<artifactId>maven-javadoc-plugin</artifactId>-->
+	<!--<configuration>-->
+	<!--<quiet>true</quiet>-->
+	<!--<stylesheetfile>${basedir}/src/site/resources/css/javadoc.css</stylesheetfile>-->
+	<!--<show>public</show>-->
+	<!--<reportSets>-->
+	<!--<reportSet>-->
+	<!--<id>html</id>-->
+	<!--<configuration>-->
+	<!--<show>public</show>-->
+	<!--</configuration>-->
+	<!--<reports>-->
+	<!--<report>javadoc</report>-->
+	<!--</reports>-->
+	<!--</reportSet>-->
+	<!--</reportSets>-->
+	<!--</configuration>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>jdepend-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>changes-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>surefire-report-maven-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>javancss-maven-plugin</artifactId>-->
+	<!--<version>2.0-beta-2</version>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<groupId>org.codehaus.mojo</groupId>-->
+	<!--<artifactId>taglist-maven-plugin</artifactId>-->
+	<!--<version>2.0-beta-1</version>-->
+	<!--<configuration>-->
+	<!--<multipleLineComments>true</multipleLineComments>-->
+	<!--<tags>TODO, FIXME, @deprecated</tags>-->
+	<!--</configuration>-->
+	<!--</plugin>-->
+	<!--<plugin>-->
+	<!--<artifactId>maven-project-info-reports-plugin</artifactId>-->
+	<!--</plugin>-->
+	<!--</plugins>-->
+	<!--</reporting>-->
 	<distributionManagement>
-		<!-- 
+		<!--
 		<repository>
 			<id>firemox.org</id>
 			<name>firemox</name>
